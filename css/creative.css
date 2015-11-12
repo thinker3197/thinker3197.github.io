@@ -81,6 +81,11 @@ header img {
     margin: 0 auto 20px;
 }
 
+header hr {
+    max-width: 70px;
+    border-color: #fff;
+    border-width: 3px;
+}
 
 section {
     padding: 100px 0;
