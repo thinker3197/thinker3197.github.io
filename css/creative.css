@@ -15,7 +15,7 @@ body {
 }
 
 hr {
-    max-width: 50px;
+    max-width: 70px;
     border-color: #f05f40;
     border-width: 3px;
 }
@@ -63,6 +63,24 @@ p {
 .text-faded {
     color: rgba(255,255,255,.7);
 }
+
+header .header-content {
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+header img {
+    display: block;
+    border-width: 2px;
+    margin: 0 auto 20px;
+}
+
+
+header img {
+    display: block;
+    margin: 0 auto 20px;
+}
+
 
 section {
     padding: 100px 0;
@@ -459,6 +477,18 @@ fieldset[disabled] .btn-primary.active {
     text-shadow: none;
     color: #fff;
     background: #222;
+}
+
+footer {
+    padding: 50px 0;
+    background: #222;
+}
+
+footer p {
+    margin: 0;
+    color: #fff;
+    text-shadow: none;
+
 }
 
 img::selection {
