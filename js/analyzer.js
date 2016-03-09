@@ -16,7 +16,6 @@ ga('create', trackingId, 'auto');
 
 ga('send', 'pageview');
 
-ga('send', 'event', 'Button', 'click', 'Download', {
-  nonInteraction: true
+$(".btn").click(function(){
+    ga('send', 'event', 'button', 'click', 'Download');
 });
-ga('send', 'timing', 'JS Dependencies', 'load');
