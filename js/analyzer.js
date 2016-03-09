@@ -1,5 +1,3 @@
-var trackingId = 'UA-74926903-1';
-
 (function(i, s, o, g, r, a, m) {
     i['GoogleAnalyticsObject'] = r;
     i[r] = i[r] || function() {
@@ -12,8 +10,5 @@ var trackingId = 'UA-74926903-1';
     m.parentNode.insertBefore(a, m)
 })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-ga('create', trackingId, 'auto', 'clickTracker');
-
-ga('clickTracker.send', 'pageview');
-
-
+ga('create', 'UA-74926903-1', 'auto');
+ga('send', 'pageview');
