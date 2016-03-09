@@ -13,5 +13,7 @@ var trackingId='UA-74926903-1';
 })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
 ga('create', trackingId, 'auto');
-ga('send', 'event', 'Button', 'click', 'Download');
+ga('send', 'event', 'Button', 'click', 'Download My Resume', {
+  nonInteraction: true
+});
 ga('send', 'pageview');
