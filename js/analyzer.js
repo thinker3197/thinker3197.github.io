@@ -13,7 +13,10 @@ var trackingId='UA-74926903-1';
 })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
 ga('create', trackingId, 'auto');
+
+ga('send', 'pageview');
+
 ga('send', 'event', 'Button', 'click', 'Download', {
   nonInteraction: true
 });
-ga('send', 'pageview');
+ga('send', 'timing', 'JS Dependencies', 'load');
