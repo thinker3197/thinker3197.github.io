@@ -1,4 +1,4 @@
-var trackingId = 'UA-74921602-1';
+var trackingId = 'UA-74926903-1';
 
 (function(i, s, o, g, r, a, m) {
     i['GoogleAnalyticsObject'] = r;
@@ -16,7 +16,4 @@ ga('create', trackingId, 'auto', 'clickTracker');
 
 ga('clickTracker.send', 'pageview');
 
-ga(function(tracker) {
-    console.log(tracker);
-});
 
