@@ -14,12 +14,6 @@ var trackingId='UA-74926903-1';
 
 ga('create', trackingId, 'auto');
 
-ga('send', 'pageview');
-
-$(".btn").click(function(){
-    ga('send', 'event', 'button', 'click', 'Download');
-});
-
 var image_variations = [
   'header.jpg',
   '56H.jpg'
@@ -31,3 +25,11 @@ window.onload = function(){
 exp_image = document.getElementById('img-responsive');
 exp_image.src = image_variations[variation];
 }
+
+ga('send', 'pageview');
+
+$(".btn").click(function(){
+    ga('send', 'event', 'button', 'click', 'Download');
+});
+
+
