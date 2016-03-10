@@ -19,3 +19,15 @@ ga('send', 'pageview');
 $(".btn").click(function(){
     ga('send', 'event', 'button', 'click', 'Download');
 });
+
+var image_variations = [
+  'header.jpg',
+  '56H.jpg'
+]
+
+var variation = cxApi.chooseVariation();
+
+window.onload = function(){
+exp_image = document.getElementById('img-responsive');
+exp_image.src = image_variations[variation];
+}
