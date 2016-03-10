@@ -10,7 +10,7 @@ var image_variations = [
     '56H.jpg'
 ]
 
-var variation = cxApi.chooseVariation();
+var variation = cxApi.chooseVariation(2);
 
 window.onload = function() {
     exp_image = document.getElementById('img-responsive');
