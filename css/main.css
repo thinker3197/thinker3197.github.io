@@ -1,0 +1,23 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
+}
+
+.intro {
+    height: 100%;
+    width: 100%;
+    background: #E5CEBC;
+}
+
+.intro-body {
+    height: 100%;
+    width: 50%;
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 6vw;
+    color: #ffffff;
+    padding: 10vh;
+}
