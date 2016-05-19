@@ -10,6 +10,7 @@ html * {
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow: hidden;
 }
 
 .wrapper {
@@ -20,7 +21,6 @@ html * {
     background-size: cover;
     background-position: 50% 50%;
     font-family: 'Montserrat', sans-serif;
-    overflow: hidden;
 }
 
 .main {
@@ -30,13 +30,14 @@ html * {
     left: 12%;
     top: 10%;
     background: #fff;
-    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    -webkit-box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+    -moz-box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
 
 .intro {
     position: relative;
     padding: 4vw;
-    padding-top: 4vh;
     background: linear-gradient( rgba(92, 0, 230, 0.75), rgba(92, 0, 230, 0.75)), url(../img/profile.jpg);
     height: 100%;
     width: 100%;
@@ -47,25 +48,79 @@ html * {
 .intro-label {
     position: relative;
     font-size: 7vw;
-    color: #ffffff; 
+    color: #ffffff;
     font-weight: 800;
 }
 
 .intro-text {
-    color: #ffffff; 
+    color: #ffffff;
     font-size: 1.5vw;
     font-weight: 500;
 }
 
 @media (max-width: 600px) {
     .intro-label {
-        font-size: 16vw;;
+        font-size: 16vw;
+        ;
     }
     .intro-text {
         font-size: 4vw;
     }
     .intro {
-        background-attachment: fixed;
+        padding-top: 4vh;
     }
 }
 
+.social {
+    position: absolute;
+    bottom: 10vh;
+    display: inline-block;
+}
+
+.icon {
+    margin: 10vw;
+    position: relative;
+    float: left;
+    overflow: hidden;
+    line-height: 5vh;
+    text-align: center;
+    color: white;
+    font-family: 'FontAwesome';
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.eclipse {
+    width: 5vh;
+    height: 5vh;
+    margin: 8.5px;
+    border-radius: 50px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 1s cubic-bezier(.25, .8, .25, 1);
+}
+
+.eclipse:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.facebook {
+    background-color: #2850ad;
+}
+
+.twitter {
+    background-color: #29c5f6;
+}
+
+.git {
+    background-color: #000000;
+}
+
+.linkedin {
+    background-color: #3a9bdc;
+}
+
+@media (max-width: 600px) {
+    .icon {
+        font-size: 1.2em;
+    }
+}
