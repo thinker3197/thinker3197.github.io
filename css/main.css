@@ -38,11 +38,17 @@ html * {
 .intro {
     position: relative;
     padding: 4vw;
+    z-index: 2;
     background: linear-gradient( rgba(92, 0, 230, 0.75), rgba(92, 0, 230, 0.75)), url(../img/profile.jpg);
     height: 100%;
     width: 100%;
     background-size: cover;
     background-position: 0% 12%;
+    transition: width 1s;
+}
+
+.clicked {
+    width: 50%;
 }
 
 .intro-label {
@@ -50,6 +56,7 @@ html * {
     font-size: 7vw;
     color: #ffffff;
     font-weight: 800;
+    /*text-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);*/
 }
 
 .intro-text {
@@ -100,7 +107,7 @@ html * {
 }
 
 .eclipse:hover {
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 .facebook {
@@ -123,4 +130,41 @@ html * {
     .icon {
         font-size: 1.2em;
     }
+}
+
+.fa {
+    position: absolute;
+    padding: 1px;
+    top: 4vh;
+    right: 4vw;
+    color: #ffffff;
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+}
+
+.fa:hover {
+    font-size: 30px;
+    cursor: pointer;
+
+}
+
+@media (max-width: 600px) {
+    .fa {
+        visibility: hidden;
+        display: none;
+    }
+}
+
+.terminal {
+    z-index: 1;
+    position: absolute;
+    display: inline;
+    float: right;
+    top: 0;
+    right: 0;
+    background: #000000;
+    height: 100%;
+    width: 50%;
 }
