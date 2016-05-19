@@ -1,10 +1,43 @@
-html,
-body {
+.wrapper {
+    position: absolute;
     height: 100%;
     width: 100%;
-    background: repeating-linear-gradient(to bottom, rgba(157, 80, 187, 0.9), rgba(110, 72, 170, 0.9)), url(https://thenextweb.com/wp-content/blogs.dir/1/files/2013/02/coding-php.jpg);
+    background: linear-gradient( rgba(172, 0, 230, 0.85), rgba(115, 0, 230, 0.95)), url(../img/back.jpg);
     background-size: cover;
     background-position: 50% 50%;
     font-family: 'Montserrat', sans-serif;
     overflow: hidden;
+}
+
+.main {
+    position: absolute;
+    height: 80%;
+    width: 76%;
+    left: 12%;
+    top: 10%;
+    background: #fff;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+.intro {
+    position: relative;
+    background: linear-gradient( rgba(92, 0, 230, 0.75), rgba(92, 0, 230, 0.75)), url(../img/profile.jpg);
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: 0% 12%;
+}
+
+.intro-label {
+    position: absolute;
+    font-size: 7vw;
+    color: #ffffff; 
+    padding-left: 4vw;
+    font-weight: 800;
+}
+
+@media (max-width: 600px) {
+    .intro-label {
+        font-size: 16vw;;
+    }
 }
