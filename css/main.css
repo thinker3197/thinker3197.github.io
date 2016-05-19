@@ -1,3 +1,17 @@
+*,
+*::after,
+*::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html * {
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 .wrapper {
     position: absolute;
     height: 100%;
@@ -21,6 +35,8 @@
 
 .intro {
     position: relative;
+    padding: 4vw;
+    padding-top: 4vh;
     background: linear-gradient( rgba(92, 0, 230, 0.75), rgba(92, 0, 230, 0.75)), url(../img/profile.jpg);
     height: 100%;
     width: 100%;
@@ -29,15 +45,27 @@
 }
 
 .intro-label {
-    position: absolute;
+    position: relative;
     font-size: 7vw;
     color: #ffffff; 
-    padding-left: 4vw;
     font-weight: 800;
+}
+
+.intro-text {
+    color: #ffffff; 
+    font-size: 1.5vw;
+    font-weight: 500;
 }
 
 @media (max-width: 600px) {
     .intro-label {
         font-size: 16vw;;
     }
+    .intro-text {
+        font-size: 4vw;
+    }
+    .intro {
+        background-attachment: fixed;
+    }
 }
+
