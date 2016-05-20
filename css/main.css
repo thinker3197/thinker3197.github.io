@@ -179,5 +179,6 @@ input:focus {
 .terminal-input {
     display: inline;
     border: none;
+    color: rgba(0, 0, 0, 0.6);
     background: #efccff;
 }
