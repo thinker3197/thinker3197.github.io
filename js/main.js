@@ -1,21 +1,38 @@
 function terminal(e, input) {
+
     var code = (e.keyCode ? e.keyCode : e.which);
     if (code == 13) {
+
         var terminalDiv = $('.terminal');
         var inputVal = $('.terminal-input').val();
+
+        $('.console').last().remove();
+        terminalDiv.append('~ $ashish >> ' + inputVal);
         if (inputVal == 'ls') {
             terminalDiv.append('<p>projects &nbsp;&nbsp;resume.pdf &nbsp;&nbsp;game.app</p>');
         }
-        terminalDiv.append('<p class="console"> ~ $ashish>> <input type = "text" class = "terminal-input" onKeyPress = "terminal(event, this)" autofocus></p>');
+        else if(inputVal == 'cat resume.pdf') {
+        	terminalDiv.append('<p>Will be added soon!</p>');
         }
+        else if(inputVal == 'cd projects') {
+        	terminalDiv.append('<p>Check my github account.</p>');
+        }
+        else if(inputVal == 'cat game.app') {
+        	terminalDiv.append('<p>Will be added soon!</p>');
+        }
+        else {
+            terminalDiv.append('<p>Enter something valid!</p>');
+        }
+        terminalDiv.append('<p class="console"> ~ $ashish >> <input type = "text" class = "terminal-input" onKeyPress = "terminal(event, this)" autofocus></p>');
     }
+}
 
-    $(document).ready(function() {
-        $('.fa').on('click', function() {
-            if ($('.intro').hasClass('clicked')) {
-                $('.intro').removeClass('clicked');
-            } else {
-                $('.intro').addClass('clicked');
-            }
-        });
+$(document).ready(function() {
+    $('.fa').on('click', function() {
+        if ($('.intro').hasClass('clicked')) {
+            $('.intro').removeClass('clicked');
+        } else {
+            $('.intro').addClass('clicked');
+        }
     });
+});

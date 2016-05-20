@@ -102,6 +102,7 @@ input:focus {
 }
 
 .eclipse {
+    cursor: pointer;
     width: 5vh;
     height: 5vh;
     margin: 8.5px;
