@@ -29,6 +29,7 @@
             ss.rel = "stylesheet";
             ss.href = href;
             ss.media = "only x";
+
             function ready(cb) {
                 if (doc.body) {
                     return cb();
@@ -73,35 +74,65 @@
         }
     }(typeof global !== "undefined" ? global : this));
     loadCSS("css/main.css");
-    loadCSS("css/bootstrap.min.css");
+    loadCSS("css/normalize.css");
+    // loadCSS("css/bootstrap.min.css");
     loadCSS("fonts/font-awesome/css/font-awesome.min.css");
     loadCSS("https://fonts.googleapis.com/css?family=Montserrat");
     </script>
-<!--     <link rel="stylesheet" href="">
+    <!--     <link rel="stylesheet" href="">
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="">
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
- --></head>
+ -->
+</head>
 
 <body>
     <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-    <div class="intro container">
-        <div class="intro-body row">
-            <h1 data-hover="Retro">Under
-            <br>Construction</h1>
+    <div class="wrapper">
+        <i class="fa fa-terminal fa-2x"></i>
+        <div class="main">
+            <div class="intro">
+                <h1 class="intro-label">Hello World.</h1>
+                <p class="intro-text">Welcome to my little space on the internet. I'm a developer, a designer, ideator and a sport programmer. Btw, people call me Ashish.</p>
+                <div class="social">
+                    <div class="icon facebook eclipse" onClick="location.href='https://www.facebook.com/ashish.3197';">&#xf09a;</div>
+                    <div class="icon twitter eclipse" onClick="location.href='https://twitter.com/Ashishgupta3197';">&#xf099;</div>
+                    <div class="icon git eclipse" onClick="location.href='https://github.com/thinker3197';">&#xf09b;</div>
+                    <div class="icon linkedin eclipse" onClick="location.href='https://www.linkedin.com/in/ashish3197';">&#xf0e1;</div>
+                </div>
+            </div>
+            <div class="terminal">
+                <p>Hey there!
+                    <br> This is my terminal
+                    <br>
+                    <br> Here is a list of commands to get you started :
+                    <br>
+                    <br> cd
+                    < path > - Move/Open specified directory
+                        <br> cd .. - Jump to previous directory
+                        <br> cat
+                        < filename > - Open file
+                            <br> ls - List items in current directory
+                            <br>
+                            <br>
+                </p>
+                <p class="console"> ~ $ashish >>
+                    <input type="text" class="terminal-input" onKeyPress="terminal(event, this)" autofocus>
+                </p>
+            </div>
         </div>
     </div>
-    <img src="https://image-gr.s3.envato.com/files/171185186/City_03_2.jpg">
+    <!-- scripts -->
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>
     window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
     </script>
-    <script src="js/vendor/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
+    <!-- <script src="js/vendor/bootstrap.min.js"></script>
+ -->    <script src="js/main.js"></script>
 </body>
 
 </html>
