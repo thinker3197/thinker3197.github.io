@@ -10,22 +10,22 @@ function terminal(e, input) {
         terminalDiv.append('~ $ashish >> ' + inputVal);
         if (inputVal == 'ls') {
             terminalDiv.append('<p>projects &nbsp;&nbsp;resume.pdf &nbsp;&nbsp;game.app</p>');
-        }
-        else if(inputVal == 'cat resume.pdf') {
-        	terminalDiv.append('<p>Will be added soon!</p>');
-        }
-        else if(inputVal == 'cd projects') {
-        	terminalDiv.append('<p>Check my github account.</p>');
-        }
-        else if(inputVal == 'cat game.app') {
-        	terminalDiv.append('<p>Will be added soon!</p>');
-        }
-        else {
+        } else if (inputVal == 'cat resume.pdf') {
+            window.location.href='https://drive.google.com/file/d/0B3OeNoTC80mGaTBUbC1ESG5vN1k/view?usp=sharing';
+        } else if (inputVal == 'cd projects') {
+            terminalDiv.append('<p>Check my github account.</p>');
+        } else if (inputVal == 'cat game.app') {
+            terminalDiv.append('<p>Will be added soon!</p>');
+        } else {
             terminalDiv.append('<p>Enter something valid!</p>');
         }
         terminalDiv.append('<p class="console"> ~ $ashish >> <input type = "text" class = "terminal-input" onKeyPress = "terminal(event, this)" autofocus></p>');
     }
 }
+
+$(window).on('load', function() {
+    $("#cover").delay(800).fadeOut(500);
+});
 
 $(document).ready(function() {
     $('.fa').on('click', function() {
