@@ -20,6 +20,7 @@ function terminal(e, input) {
             terminalDiv.append('<p>Enter something valid!</p>');
         }
         terminalDiv.append('<p class="console"> ~ $ashish >> <input type = "text" class = "terminal-input" onKeyPress = "terminal(event, this)" autofocus></p>');
+        document.getElementByClass("terminal-input").focus()
     }
 }
 
