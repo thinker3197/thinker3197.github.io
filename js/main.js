@@ -13,8 +13,8 @@ function terminal(e, input) {
         } else if (inputVal == 'cat resume.pdf') {
             window.location.href='https://drive.google.com/file/d/0B3OeNoTC80mGaTBUbC1ESG5vN1k/view?usp=sharing';
         } else if (inputVal == 'cd projects') {
-            terminalDiv.append('<p>Check my github account.</p>');
-        } else if (inputVal == 'cat game.app') {
+            terminalDiv.append('<p>WikiSearch &nbsp;&nbsp;Clippy &nbsp;&nbsp;Erectus</p>');
+        } else if (inputVal == 'cat game.app' || inputVal == 'cd WikiSearch' || inputVal == 'cd Erectus' || inputVal == 'Clippy') {
             terminalDiv.append('<p>Will be added soon!</p>');
         } else {
             terminalDiv.append('<p>Enter something valid!</p>');
