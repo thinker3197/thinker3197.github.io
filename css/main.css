@@ -102,12 +102,11 @@ input:focus {
     margin: 10vw;
     position: relative;
     float: left;
-    overflow: hidden;
     line-height: 5vh;
     text-align: center;
     color: white;
     font-family: 'FontAwesome';
-    font-size: 1.5vw;
+    font-size: 2.5vh;
     text-align: center;
 }
 
@@ -139,12 +138,6 @@ input:focus {
 
 .linkedin {
     background-color: #3a9bdc;
-}
-
-@media (max-width: 600px) {
-    .icon {
-        font-size: 1.2em;
-    }
 }
 
 .fa {
