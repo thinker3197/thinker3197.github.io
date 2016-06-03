@@ -84,19 +84,22 @@
             w.loadCSS = loadCSS;
         }
     }(typeof global !== "undefined" ? global : this));
-    // loadCSS("css/main.css");
+    loadCSS("css/main.css");
     loadCSS("css/normalize.css");
-    // loadCSS("css/bootstrap.min.css");
     loadCSS("fonts/font-awesome/css/font-awesome.min.css");
     loadCSS("https://fonts.googleapis.com/css?family=Montserrat");
     </script>
-    <link rel="stylesheet" href="css/main.css">
-    <!--     <link rel="stylesheet" href="">
-    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="">
-    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
- -->
+    <style type="text/css">
+    #cover {
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background: linear-gradient( rgba(172, 0, 230, 1), rgba(115, 0, 230, 1));
+        z-index: 9999;
+    }
+    </style>
 </head>
 
 <body>
@@ -140,12 +143,10 @@
     <div id="cover"></div>
     <!-- scripts -->
     <script async src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script async src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>
     window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
     </script>
-    <!-- <script src="js/vendor/bootstrap.min.js"></script>
- -->
     <script async src="js/main.js"></script>
 </body>
 

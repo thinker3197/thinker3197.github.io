@@ -17,16 +17,6 @@ input:focus {
     outline: none;
 }
 
-#cover {
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background: linear-gradient( rgba(172, 0, 230, 1), rgba(115, 0, 230, 1));
-    z-index: 9999;
-}
-
 .wrapper {
     position: absolute;
     height: 100%;
