@@ -20,13 +20,11 @@ function terminal(e, input) {
             terminalDiv.append('<p>Enter something valid!</p>');
         }
         terminalDiv.append('<p class="console"> ~ $ashish >> <input type = "text" class = "terminal-input" onKeyPress = "terminal(event, this)" autofocus></p>');
-        document.getElementByClass("terminal-input").focus()
+        $(".terminal-input").focus();
     }
 }
 
-$(window).on('load', function() {
-    $("#cover").delay(800).fadeOut(500);
-});
+$("#cover").delay(800).fadeOut(500);
 
 $(document).ready(function() {
     $('.fa').on('click', function() {
