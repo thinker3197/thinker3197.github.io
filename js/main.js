@@ -44,7 +44,9 @@ function terminal(e, input) {
     }
 }
 
-$("#cover").delay(800).fadeOut(500);
+$(window).load(function(){
+   $('#cover').fadeOut(300);
+});
 
 $(document).ready(function() {
     $('.fa').on('click', function() {
