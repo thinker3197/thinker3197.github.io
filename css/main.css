@@ -53,7 +53,7 @@ input:focus {
     position: relative;
     padding: 4vw;
     z-index: 2;
-    background-image: filter(linear-gradient( rgba(92, 0, 230, 0.75), rgba(92, 0, 230, 0.75)),url(data:../img/profile.jpg;base64,/9j/4AAQ ...[truncated] ...), blur(20px));
+    background: linear-gradient( rgba(92, 0, 230, 0.75), rgba(92, 0, 230, 0.75)), url(../img/profile.jpg);
     height: 100%;
     width: 100%;
     background-size: cover;
