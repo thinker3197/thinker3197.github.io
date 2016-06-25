@@ -21,6 +21,12 @@ input:focus {
     outline: none;
 }
 
+h1 {
+    font-size: 2em;
+    margin: .3em 0
+}
+
+
 #cover {
     position: fixed;
     height: 100%;
@@ -55,7 +61,7 @@ input:focus {
 
 .intro {
     position: relative;
-    padding: 4vw;
+    padding: 3vw;
     z-index: 2;
     background: linear-gradient( rgba(92, 0, 230, 0.75), rgba(92, 0, 230, 0.75)), url(../img/profile.jpg);
     height: 100%;
@@ -63,6 +69,7 @@ input:focus {
     background-size: cover;
     background-position: 0% 12%;
     transition: width 1s;
+
 }
 
 .clicked {
@@ -86,19 +93,18 @@ input:focus {
 @media (max-width: 600px) {
     .intro-label {
         font-size: 16vw;
-        ;
     }
     .intro-text {
         font-size: 4vw;
     }
     .intro {
-        padding-top: 4vh;
+        padding-top: 1vh;
     }
 }
 
 .social {
     position: absolute;
-    bottom: 8vh;
+    bottom: 6vh;
     display: inline-block;
 }
 
