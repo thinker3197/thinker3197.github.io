@@ -16,7 +16,9 @@
 body {
     margin: 0
 }
-
+input {
+    font: inherit;
+}
 input:focus {
     outline: none;
 }
@@ -62,6 +64,7 @@ h1 {
 .intro {
     position: relative;
     padding: 3vw;
+    padding-top: 2.5vw;
     z-index: 2;
     background: linear-gradient( rgba(92, 0, 230, 0.75), rgba(92, 0, 230, 0.75)), url(../img/profile.jpg);
     height: 100%;
@@ -79,9 +82,9 @@ h1 {
 .intro-label {
     position: relative;
     font-size: 7vw;
+    line-height: 15vh;
     color: #ffffff;
     font-weight: 800;
-    /*text-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);*/
 }
 
 .intro-text {
@@ -91,6 +94,10 @@ h1 {
 }
 
 @media (max-width: 600px) {
+    .main {
+        width: 86%;
+        left: 7%;
+    }
     .intro-label {
         font-size: 16vw;
     }
@@ -98,6 +105,7 @@ h1 {
         font-size: 4vw;
     }
     .intro {
+        padding: 4vw;
         padding-top: 1vh;
     }
 }
