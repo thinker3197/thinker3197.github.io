@@ -6,11 +6,15 @@
     box-sizing: border-box;
 }
 
-html * {
+* {
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow: hidden;
+}
+
+body {
+    margin: 0
 }
 
 input:focus {
