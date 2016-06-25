@@ -64,7 +64,6 @@ h1 {
 .intro {
     position: relative;
     padding: 3vw;
-    padding-top: 2.5vw;
     z-index: 2;
     background: linear-gradient( rgba(92, 0, 230, 0.75), rgba(92, 0, 230, 0.75)), url(../img/profile.jpg);
     height: 100%;
@@ -82,7 +81,7 @@ h1 {
 .intro-label {
     position: relative;
     font-size: 7vw;
-    line-height: 15vh;
+    line-height: 14.5vh;
     color: #ffffff;
     font-weight: 800;
 }
@@ -100,6 +99,7 @@ h1 {
     }
     .intro-label {
         font-size: 16vw;
+        line-height: 12vh;
     }
     .intro-text {
         font-size: 4vw;
