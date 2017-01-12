@@ -20,7 +20,7 @@ function terminal(e, input) {
         } else if (inputVal == 'ls' && flag == 1) {
             terminalDiv.append('<p>WikiSearch &nbsp;&nbsp;Clippy &nbsp;&nbsp;ink &nbsp;&nbsp;Erectus</p>');
         } else if (inputVal == 'open resume.pdf' && flag == 0) {
-            window.location.href = 'https://drive.google.com/file/d/0B3OeNoTC80mGei1WX25zcFdYaVE/view?usp=sharing';
+            window.location.href = 'https://drive.google.com/open?id=0B3OeNoTC80mGX0ZITW5Bb19Bclk';
         } else if (inputVal == 'cd projects') {
             terminalDiv.append('<p></p>');
             flag = 1;
