@@ -12,6 +12,9 @@ node_modules# See https://help.github.com/ignore-files/ for more about ignoring 
 # production
 /build
 
+# editor
+/.vscode
+
 # misc
 .DS_Store
 .env.local
