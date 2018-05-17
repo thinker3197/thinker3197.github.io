@@ -15,8 +15,6 @@ export const HomeContainer = styled.div`
   justify-content: space-between;
 `;
 
-export const Logo = styled.img``;
-
 export const AboutContainer = styled.div`
   margin: 4rem;
   max-width: 420px;

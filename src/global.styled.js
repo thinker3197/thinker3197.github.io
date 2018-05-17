@@ -1,16 +1,28 @@
-import { injectGlobal } from "styled-components";
-// import Charter from './fonts/Charter.ttf';
+import { css, injectGlobal } from "styled-components";
+
+const selectionMixin = css`
+  color: #ffffff;
+  background: #7684ff;
+`;
 
 injectGlobal`
   * {
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   body {
     margin: 0;
     padding: 0;
+  }
+
+  ::selection {
+    ${selectionMixin}
+  }
+
+  ::-moz-selection {
+    ${selectionMixin}
   }
 
   #portfolio {
