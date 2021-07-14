@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&family=Playfair+Display:wght@700&display=swap");
+
+$section-bg: #fdf8f4;
+$logo-bg: #809cfe;
+$shadow-bg: #dfdfdf;
+$text-color: #000b38;
+
+@mixin flex($justify: center, $align: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  padding: 24px;
+  font-family: "Crimson Text", serif;
+  color: $text-color;
+  font-size: 24px;
+  line-height: 33px;
+}
+
+main {
+  height: 100%;
+  background-color: $section-bg;
+}
+
+section {
+  height: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.logo {
+  width: fit-content;
+  padding: 4px 8px;
+  background-color: $logo-bg;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  height: 54px;
+  box-shadow: 2px 4px 4px $shadow-bg;
+}
+
+.about {
+  &__content {
+    h1 {
+      font-family: "Playfair Display", serif;
+      font-size: 100px;
+      line-height: 133px;
+      margin: 5px 0;
+    }
+
+    // p {
+
+    // }
+  }
+
+  &__social {
+    & > ul {
+      @include flex(flex-start);
+      list-style: none;
+      padding: 0;
+    }
+  }
+
+  &__social-item {
+    @include flex;
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    border-radius: 50%;
+    padding: 8px;
+    filter: invert(8%) sepia(65%) saturate(2970%) hue-rotate(217deg) brightness(81%) contrast(112%);
+
+    &:hover {
+      border: 1px solid $text-color;
+    }
+
+    & > img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__resume {
+    margin-top: 50px;
+
+    & > button {
+      cursor: pointer;
+      background: none;
+      border: 2px solid $text-color;
+      border-radius: 25px;
+      padding: 10px 24px;
+    }
+  }
+}
