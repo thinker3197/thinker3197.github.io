@@ -4,11 +4,23 @@ $section-bg: #fdf8f4;
 $logo-bg: #809cfe;
 $shadow-bg: #dfdfdf;
 $text-color: #000b38;
+$backdrop-bg: #fcf0e6;
 
 @mixin flex($justify: center, $align: center) {
   display: flex;
   justify-content: $justify;
   align-items: $align;
+}
+
+@mixin profile-img {
+  width: 320px;
+  height: 380px;
+  border-radius: 4px;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 *,
@@ -33,7 +45,7 @@ main {
 
 section {
   height: 100%;
-  max-width: 1024px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -47,6 +59,12 @@ section {
   box-shadow: 2px 4px 4px $shadow-bg;
 }
 
+.container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding-top: 40px;
+}
+
 .about {
   &__content {
     h1 {
@@ -55,10 +73,6 @@ section {
       line-height: 133px;
       margin: 5px 0;
     }
-
-    // p {
-
-    // }
   }
 
   &__social {
@@ -76,7 +90,8 @@ section {
     margin-right: 20px;
     border-radius: 50%;
     padding: 8px;
-    filter: invert(8%) sepia(65%) saturate(2970%) hue-rotate(217deg) brightness(81%) contrast(112%);
+    filter: invert(8%) sepia(65%) saturate(2970%) hue-rotate(217deg)
+      brightness(81%) contrast(112%);
 
     &:hover {
       border: 1px solid $text-color;
@@ -89,7 +104,7 @@ section {
   }
 
   &__resume {
-    margin-top: 50px;
+    margin-top: 35px;
 
     & > button {
       cursor: pointer;
@@ -98,5 +113,35 @@ section {
       border-radius: 25px;
       padding: 10px 24px;
     }
+  }
+}
+
+.profile {
+  position: relative;
+  justify-self: center;
+  padding-top: 80px;
+  padding-left: 40px;
+
+  &__img {
+    @include profile-img;
+    background-image: url("../img/profile-glitch.jpg");
+    background-size: cover;
+    background-position: 70% 0;
+    position: relative;
+    z-index: 1;
+    transition: background-image 0.5s ease-in-out;
+
+    &:hover {
+      background-image: url("../img/profile.jpg");
+    }
+  }
+
+  &__backdrop {
+    @include profile-img;
+    background: $backdrop-bg;
+    position: absolute;
+    top: 113px;
+    left: 7px;
+    z-index: 0;
   }
 }
