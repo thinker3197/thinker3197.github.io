@@ -24,7 +24,7 @@ class Portfolio {
         el.classList.add(tabletClass);
       });
     }
-  };
+  }
 
   beforeAnimation() {
     const heading = document.querySelectorAll(".about__content > h1");
@@ -35,11 +35,15 @@ class Portfolio {
         "<span class='letter'>$&</span>"
       );
     });
-  };
+  }
 
   beginAnimation() {
     this.animation = anime
       .timeline({ easing: "easeOutExpo" })
+      .add({
+        targets: "body",
+        opacity: [0, 1],
+      })
       .add({
         targets: ".letter",
         translateY: [120, 0],
@@ -106,13 +110,13 @@ class Portfolio {
         },
         "-=500"
       );
-  };
+  }
 
   afterAnimation() {
     this.animation.finished.then(() => {
       console.log("done");
     });
-  };
+  }
 }
 
 const app = new Portfolio();
