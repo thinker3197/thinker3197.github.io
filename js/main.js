@@ -1,59 +1,123 @@
-var flag = 0;
+import anime from "animejs";
 
-function terminal(e, input) {
+class Portfolio {
+  init() {
+    window.onload = () => {
+      this.setTabletClasses();
+      this.beforeAnimation();
+      this.beginAnimation();
+      this.afterAnimation();
+    };
+  }
 
-    var code = (e.keyCode ? e.keyCode : e.which);
-    if (code == 13) {
+  setTabletClasses() {
+    const tabletClass = "is-tablet";
+    const userAgent = navigator.userAgent.toLowerCase();
+    const isTablet =
+      /(ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/.test(
+        userAgent
+      );
+    const tabResponsive = document.querySelectorAll(".tab-responsive");
 
-        var terminalDiv = $('.terminal');
-        var inputVal = $('.terminal-input').val();
-
-        $('.console').last().remove();
-        if(flag == 0) {
-            terminalDiv.append('~ $ashish >> ' + inputVal);
-        }
-        else {
-            terminalDiv.append('~/projects $ashish >> ' + inputVal);
-        }
-        if (inputVal == 'ls' && flag == 0) {
-            terminalDiv.append('<p>projects &nbsp;&nbsp;resume.pdf &nbsp;&nbsp;game.app</p>');
-        } else if (inputVal == 'ls' && flag == 1) {
-            terminalDiv.append('<p>WikiSearch &nbsp;&nbsp;Clippy &nbsp;&nbsp;ink &nbsp;&nbsp;Erectus</p>');
-        } else if (inputVal == 'open resume.pdf' && flag == 0) {
-            window.location.href = 'https://drive.google.com/file/d/0B3OeNoTC80mGV2RTUUxZWW82ZDg/view?usp=sharing';
-        } else if (inputVal == 'cd projects') {
-            terminalDiv.append('<p></p>');
-            flag = 1;
-        } else if ((inputVal == 'cd WikiSearch' ||  inputVal == 'cd ink') && flag == 1) {
-            window.location.href = 'http://github.com/thinker3197/' + inputVal.slice(3, inputVal.length);
-        } else if ((inputVal == 'cd Erectus' || inputVal == 'cd Clippy') && flag == 1) {
-            window.location.href = 'http://github.com/The-Turing-Machine/' + inputVal.slice(3, inputVal.length);
-        } else if (inputVal == 'cd ..' && flag == 1) {
-            terminalDiv.append('<p></p>');
-            flag = 0;
-        } else {
-            terminalDiv.append('<p>Enter something valid!</p>');
-        }
-        if(flag == 0) {
-            terminalDiv.append('<p class="console"> ~ $ashish >> <input type = "text" class = "terminal-input" onKeyPress = "terminal(event, this)" autofocus></p>');
-        }
-        else {
-            terminalDiv.append('<p class="console"> ~/projects $ashish >> <input type = "text" class = "terminal-input" onKeyPress = "terminal(event, this)" autofocus></p>');
-        }
-        $(".terminal-input").focus();
+    if (isTablet) {
+      Array.from(tabResponsive).forEach((el) => {
+        el.classList.add(tabletClass);
+      });
     }
+  }
+
+  beforeAnimation() {
+    const heading = document.querySelectorAll(".about__content > h1");
+
+    heading.forEach((item) => {
+      item.innerHTML = item.textContent.replace(
+        /\S/g,
+        "<span class='letter'>$&</span>"
+      );
+    });
+  }
+
+  beginAnimation() {
+    this.animation = anime
+      .timeline({ easing: "easeOutExpo" })
+      .add({
+        targets: "body",
+        opacity: [0, 1],
+      })
+      .add({
+        targets: ".letter",
+        translateY: [120, 0],
+        delay: anime.stagger(30, { start: 0 }),
+      })
+      .add(
+        {
+          targets: ".about__content > p.description",
+          translateY: [100, 0],
+          opacity: [0, 1],
+        },
+        "-=300"
+      )
+      .add(
+        {
+          targets: ".about__content > p.current",
+          translateY: [100, 0],
+          opacity: [0, 1],
+        },
+        "-=600"
+      )
+      .add(
+        {
+          targets: ".about__resume",
+          opacity: [0, 1],
+        },
+        "-=400"
+      )
+      .add(
+        {
+          targets: ".profile__img",
+          scale: [0, 1],
+        },
+        "-=500"
+      )
+      .add(
+        {
+          targets: ".profile__social-item",
+          opacity: [0, 1],
+        },
+        "-=500"
+      )
+      .add(
+        {
+          targets: ".profile__divider",
+          scale: [0, 1],
+          translateY: [100, 0],
+        },
+        "-=1000"
+      )
+      .add(
+        {
+          targets: ".logo",
+          translateY: [-100, 0],
+        },
+        "-=1000"
+      )
+      .add(
+        {
+          targets: ".profile__backdrop",
+          translateY: [-33, 0],
+          translateX: [33, 0],
+          opacity: [0, 1],
+        },
+        "-=500"
+      );
+  }
+
+  afterAnimation() {
+    this.animation.finished.then(() => {
+      console.log("done");
+    });
+  }
 }
 
-$(window).load(function(){
-   $('#cover').fadeOut(300);
-});
-
-$(document).ready(function() {
-    $('.fa').on('click', function() {
-        if ($('.intro').hasClass('clicked')) {
-            $('.intro').removeClass('clicked');
-        } else {
-            $('.intro').addClass('clicked');
-        }
-    });
-});
+const app = new Portfolio();
+app.init();
