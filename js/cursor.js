@@ -51,7 +51,6 @@ export class Cursor {
     el.addEventListener(
       "mouseover",
       (e) => {
-          console.log(e.target.id)
         if (!this.isTouchLocked && e.target !== this.currentJobEl) {
           this.currentDiameter = fontSize * 1.4;
           this.cursorEl.style.height = this.currentDiameter + "px";

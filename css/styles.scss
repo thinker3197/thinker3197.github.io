@@ -74,12 +74,10 @@ main {
 
 section {
   @include flex;
-  // flex-direction: column;
   height: 100%;
   max-width: 1080px;
   margin: 0 auto;
   position: relative;
-  // padding-top: 60px;
 
   @media only screen and (max-width: 1080px) {
     max-width: 900px;
@@ -195,15 +193,13 @@ section {
       margin-top: 24px;
     }
 
-    & > button {
-      // cursor: none;
+    button {
       background: none;
       border: 2px solid $text-color;
       border-radius: 25px;
       padding: 10px 24px;
       position: relative;
       z-index: 99999;
-      // transition: all 0.2s ease-in-out;
 
       &:hover {
         color: #ffffff;
