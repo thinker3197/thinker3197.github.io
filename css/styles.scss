@@ -16,6 +16,11 @@ $backdrop-bg: #fcf0e6;
   width: 320px;
   height: 380px;
   border-radius: 4px;
+
+  @media only screen and (max-width: 1080px) {
+    width: 280px;
+    height: 332px;
+  }
 }
 
 * {
@@ -45,7 +50,21 @@ body {
   font-family: "Crimson Text", serif;
   color: $text-color;
   font-size: 24px;
-  line-height: 33px;
+  line-height: normal;
+
+  @media only screen and (max-height: 768px) {
+    font-size: 22px;
+  }
+
+  @media only screen and (max-width: 1080px) {
+    font-size: 20px;
+  }
+
+  @media only screen and (min-width: 320px) and (max-width: 480px) {
+    height: auto;
+    padding: 12px;
+    font-size: 16px;
+  }
 }
 
 main {
@@ -54,9 +73,31 @@ main {
 }
 
 section {
+  @include flex;
+  // flex-direction: column;
   height: 100%;
-  max-width: 1200px;
+  max-width: 1080px;
   margin: 0 auto;
+  position: relative;
+  // padding-top: 60px;
+
+  @media only screen and (max-width: 1080px) {
+    max-width: 900px;
+  }
+
+  @media only screen and (min-width: 320px) and (max-width: 480px) {
+    max-width: none;
+    padding: 24px;
+    display: block;
+  }
+
+  &.is-tablet {
+    @media only screen and (min-width: 800px) and (max-width: 1280px) and (-webkit-min-device-pixel-ratio: 2) {
+      max-width: none;
+      padding: 24px;
+      display: block;
+    }
+  }
 }
 
 .logo {
@@ -67,22 +108,70 @@ section {
   border-bottom-left-radius: 4px;
   height: 54px;
   box-shadow: 2px 4px 4px $shadow-bg;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  @media only screen and (min-width: 320px) and (max-width: 480px) {
+    left: 12px;
+  }
+
+  &.is-tablet {
+    @media only screen and (min-width: 800px) and (max-width: 1280px) and (-webkit-min-device-pixel-ratio: 2) {
+      left: 24px;
+    }
+  }
 }
 
 .container {
   display: grid;
-  grid-template-columns: 50% 50%;
-  padding-top: 40px;
+  grid-template-columns: calc(100% - 410px) 410px;
+  padding: 54px 0;
+
+  @media only screen and (min-width: 320px) and (max-width: 480px) {
+    display: block;
+  }
+
+  &.is-tablet {
+    @media only screen and (min-width: 800px) and (max-width: 1280px) and (-webkit-min-device-pixel-ratio: 2) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
 }
 
 .about {
+  padding-right: 72px;
+
+  @media only screen and (min-width: 320px) and (max-width: 480px) {
+    padding: 0;
+  }
+
+  &.is-tablet {
+    @media only screen and (min-width: 800px) and (max-width: 1280px) and (-webkit-min-device-pixel-ratio: 2) {
+      padding: 0;
+    }
+  }
+
   &__content {
     h1 {
       font-family: "Playfair Display", serif;
       font-size: 100px;
-      line-height: 133px;
+      line-height: normal;
       margin: 5px 0;
       overflow: hidden;
+
+      @media only screen and (max-height: 768px) {
+        font-size: 90px;
+      }
+
+      @media only screen and (max-width: 1080px) {
+        font-size: 80px;
+      }
+
+      @media only screen and (min-width: 320px) and (max-width: 480px) {
+        font-size: 60px;
+      }
     }
 
     .letter {
@@ -101,6 +190,10 @@ section {
 
   &__resume {
     margin-top: 35px;
+
+    @media only screen and (min-width: 320px) and (max-width: 480px) {
+      margin-top: 24px;
+    }
 
     & > button {
       // cursor: none;
@@ -126,13 +219,38 @@ section {
   padding-left: 40px;
   @include flex(center, flex-start);
 
+  @media only screen and (min-width: 320px) and (max-width: 480px) {
+    padding: 0;
+    padding-top: 40px;
+  }
+
+  &.is-tablet {
+    @media only screen and (min-width: 800px) and (max-width: 1280px) and (-webkit-min-device-pixel-ratio: 2) {
+      padding: 0;
+    }
+  }
+
   &__content {
     display: grid;
     grid-template-columns: auto auto;
+
+    &.is-tablet {
+      @media only screen and (min-width: 800px) and (max-width: 1280px) and (-webkit-min-device-pixel-ratio: 2) {
+        display: block;
+        width: 100%;
+      }
+    }
   }
 
   &__img-wrapper {
     position: relative;
+
+    &.is-tablet {
+      @media only screen and (min-width: 800px) and (max-width: 1280px) and (-webkit-min-device-pixel-ratio: 2) {
+        width: 100%;
+        padding: 33px;
+      }
+    }
   }
 
   &__img {
@@ -142,6 +260,13 @@ section {
     position: relative;
     z-index: 1;
     background-image: url("../img/profile.jpg");
+
+    &.is-tablet {
+      @media only screen and (min-width: 800px) and (max-width: 1280px) and (-webkit-min-device-pixel-ratio: 2) {
+        width: 100%;
+        height: 600px;
+      }
+    }
   }
 
   &__backdrop {
@@ -151,6 +276,21 @@ section {
     top: 33px;
     left: -33px;
     z-index: 0;
+
+    @media only screen and (min-width: 320px) and (max-width: 480px) {
+      left: -12px;
+      top: 12px;
+    }
+
+    &.is-tablet {
+      @media only screen and (min-width: 800px) and (max-width: 1280px) and (-webkit-min-device-pixel-ratio: 2) {
+        left: 0;
+        top: 0;
+        opacity: 1;
+        width: 100%;
+        height: 100%;
+      }
+    }
   }
 
   &__social {
@@ -160,16 +300,31 @@ section {
     padding-left: 24px;
     padding-top: 30px;
     margin: 0;
+
+    &.is-tablet {
+      @media only screen and (min-width: 800px) and (max-width: 1280px) and (-webkit-min-device-pixel-ratio: 2) {
+        flex-direction: row;
+        padding: 24px 0;
+        justify-content: flex-start;
+      }
+    }
   }
 
   &__social-item {
     width: 24px;
-    height: 24px;
+    height: auto;
     margin-bottom: 28px;
     border-radius: 50%;
     filter: invert(8%) sepia(65%) saturate(2970%) hue-rotate(217deg)
       brightness(81%) contrast(112%);
     transition: filter 0.1s ease-in-out;
+
+    &.is-tablet {
+      @media only screen and (min-width: 800px) and (max-width: 1280px) and (-webkit-min-device-pixel-ratio: 2) {
+        margin-bottom: 0;
+        margin-right: 24px;
+      }
+    }
 
     & > img {
       width: 100%;

@@ -1,5 +1,4 @@
 import anime from "animejs";
-
 // const cursor = document.querySelector("#cursor");
 // const resumeCta = document.querySelector("#resume-cta");
 
@@ -12,6 +11,16 @@ import anime from "animejs";
 //     cursor.style.opacity = 0;
 //   }
 // });
+const TABLET_CLASS = "is-tablet";
+const userAgent = navigator.userAgent.toLowerCase();
+const isTablet = /(ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/.test(userAgent);
+const tabResponsive = document.querySelectorAll(".tab-responsive");
+
+if(isTablet) {
+  Array.from(tabResponsive).forEach(el => {
+    el.classList.add(TABLET_CLASS);
+  })
+}
 
 const heading = document.querySelectorAll(".about__content > h1");
 heading.forEach((item) => {
@@ -88,8 +97,8 @@ const animation = anime
   .add(
     {
       targets: ".profile__backdrop",
-      left: [0, -33],
-      top: [0, 33],
+      translateY: [-33, 0],
+      translateX: [33, 0],
       opacity: [0, 1],
     },
     "-=500"
