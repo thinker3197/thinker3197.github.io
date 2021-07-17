@@ -1,12 +1,12 @@
 {
-  "short_name": "",
-  "name": "",
+  "short_name": "Ashish",
+  "name": "Ashish Gupta",
   "icons": [{
-    "src": "icon.png",
+    "src": "favicon.png",
     "type": "image/png",
-    "sizes": "192x192"
+    "sizes": "90x90"
   }],
   "start_url": "/?utm_source=homescreen",
-  "background_color": "#fafafa",
-  "theme_color": "#fafafa"
+  "background_color": "#fdf8f4",
+  "theme_color": "#fdf8f4"
 }
