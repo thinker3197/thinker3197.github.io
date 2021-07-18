@@ -21,6 +21,11 @@ $backdrop-bg: #fcf0e6;
     width: 280px;
     height: 332px;
   }
+
+  @media only screen and (min-width: 320px) and (max-width: 480px) {
+    width: 100%;
+    height: 320px;
+  }
 }
 
 * {
@@ -120,6 +125,11 @@ section {
       left: 24px;
     }
   }
+
+  & > img {
+    height: auto;
+    width: 100%;
+  }
 }
 
 .container {
@@ -169,7 +179,7 @@ section {
       }
 
       @media only screen and (min-width: 320px) and (max-width: 480px) {
-        font-size: 60px;
+        font-size: 48px;
       }
     }
 
@@ -217,6 +227,7 @@ section {
   @include flex(center, flex-start);
 
   @media only screen and (min-width: 320px) and (max-width: 480px) {
+    width: 100%;
     padding: 0;
     padding-top: 40px;
   }
@@ -230,6 +241,11 @@ section {
   &__content {
     display: grid;
     grid-template-columns: auto auto;
+
+    @media only screen and (min-width: 320px) and (max-width: 480px) {
+      width: 100%;
+      grid-template-columns: 5fr 1fr;
+    }
 
     &.is-tablet {
       @media only screen and (min-width: 800px) and (max-width: 1280px) and (-webkit-min-device-pixel-ratio: 2) {
@@ -316,6 +332,10 @@ section {
       brightness(81%) contrast(112%);
     transition: filter 0.1s ease-in-out;
 
+    @media only screen and (min-width: 320px) and (max-width: 480px) {
+      width: 20px;
+    }
+
     &.is-tablet {
       @media only screen and (min-width: 800px) and (max-width: 1280px) and (-webkit-min-device-pixel-ratio: 2) {
         margin-bottom: 0;
@@ -323,7 +343,7 @@ section {
       }
     }
 
-    & > img {
+    img {
       width: 100%;
       height: auto;
     }
